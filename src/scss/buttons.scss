@@ -1,0 +1,112 @@
+/* 1.5 Buttons CSS */
+
+.login-btn {
+  position: relative;
+  z-index: 1;
+  color: $white !important;
+  font-size: 12px !important;
+  text-transform: uppercase;
+  line-height: 33px;
+  padding: 0 20px;
+  min-width: 100px;
+  height: 35px;
+  border-radius: 50px;
+  border: 2px solid;
+  letter-spacing: 1px;
+  border-color: $border;
+
+  &:focus,
+  &:hover {
+    color: $white;
+    background: $border;
+    border-color: $border;
+  }
+  @media #{$breakpoint-md} {
+    margin-left: 15px !important;
+    margin-top: 15px;
+    color: $dark !important;
+
+    &:focus,
+    &:hover {
+      color: $white !important;
+    }
+  }
+  @media #{$breakpoint-xs} {
+    margin-left: 15px !important;
+    margin-top: 15px;
+    color: $dark !important;
+
+    &:focus,
+    &:hover {
+      color: $white !important;
+    }
+  }
+}
+
+.reen-btn {
+  position: relative;
+  z-index: 1;
+  min-width: 160px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding: 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background-size: 200% auto;
+  color: $white;
+  box-shadow: 0 3ox 20px rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  background-image: -webkit-linear-gradient(left, #21d397 0%, #7450fe 51%, #21d397 100%);
+  background-image: linear-gradient(to right, #654ea3 0%, #eaafc8 51%, #654ea3 100%);
+  @include transition(all 500ms);
+
+  &:hover {
+    background-position: right center;
+    color: $white;
+  }
+  @media #{$breakpoint-xs} {
+    min-width: 135px;
+  }
+}
+
+.ripple {
+  position: absolute;
+  height: 0.25em;
+  width: 0.25em;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-transform-origin: center 50%;
+  transform-origin: center 50%;
+  @include transition(opacity 1.6s);
+  @include animation(ripple 1.6s);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.ripple-active {
+  opacity: 1;
+}
+@-webkit-keyframes ripple {
+  0% {
+    @include transform(scale3d(0, 0, 0));
+  }
+
+  100% {
+    @include transform(scale3d(50, 50, 50));
+  }
+}
+@keyframes ripple {
+  0% {
+    @include transform(scale3d(0, 0, 0));
+  }
+
+  100% {
+    @include transform(scale3d(50, 50, 50));
+  }
+}

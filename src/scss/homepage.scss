@@ -1,0 +1,854 @@
+/* 3.8.1 Blip Area CSS */
+.reen-blip {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 2em 2em 2em 2em;
+    background-color: #21d397;
+    box-shadow: 0 0 5px $white;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    opacity: 0;
+    @include animation(reenblipper ease 4s none infinite);
+}
+
+@-webkit-keyframes reenblipper {
+    0% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes reenblipper {
+    0% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.reen-blip {
+    &.blip1 {
+        top: 20%;
+        left: 20%;
+    }
+
+    &.blip2 {
+        top: 70%;
+        left: 30%;
+    }
+
+    &.blip3 {
+        top: 30%;
+        left: 10%;
+    }
+
+    &.blip4 {
+        top: 60%;
+        left: 10%;
+    }
+}
+
+.reen-dots {
+    @include display-flex(flex);
+    margin-bottom: 30px;
+
+    span {
+        width: 8px;
+        height: 8px;
+        background-color: $white;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+}
+
+.reen-dots span:first-child {
+    background-color: #00a8ff;
+}
+
+.reen-dots span:nth-child(2) {
+    background-color: #9c88ff;
+}
+
+.reen-dots span:nth-child(3) {
+    background-color: #fbc531;
+}
+
+.reen-dots span:nth-child(4) {
+    background-color: #4cd137;
+}
+
+.reen-dots span:nth-child(5) {
+    background-color: #487eb0;
+}
+
+.reen-dots span:nth-child(6) {
+    background-color: #e84118;
+}
+
+.reen-dots span:nth-child(7) {
+    background-color: #8c7ae6;
+}
+
+/* 3.8.2 About Area CSS */
+
+.about-us-area {
+    position: relative;
+    z-index: 1;
+}
+
+.who-we-contant h4 {
+    margin-bottom: 20px;
+    font-size: 30px;
+
+    @media #{$breakpoint-lg} {
+        font-size: 26px;
+    }
+
+    @media #{$breakpoint-xs} {
+        font-size: 24px;
+    }
+}
+
+.our-mission-area {
+    position: relative;
+    z-index: 10;
+
+    &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        content: '';
+        background: rgba(72, 52, 212, 0.9);
+        background: -webkit-linear-gradient(to right, rgba(72, 52, 212, 0.9), rgba(52, 31, 151, 0.9));
+        background: -webkit-linear-gradient(left, rgba(72, 52, 212, 0.9), rgba(52, 31, 151, 0.9));
+        background: linear-gradient(to right, rgba(62, 81, 81, .8), rgba(222, 203, 164, .8));
+        z-index: -1;
+    }
+}
+
+.single-mission {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    i {
+        font-size: 50px;
+        margin-bottom: 30px;
+        display: block;
+        color: $white;
+    }
+
+    h6 {
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-top: 0;
+    }
+}
+
+.service_single_content {
+    position: relative;
+    z-index: 1;
+
+    .service_icon i {
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: $white;
+        display: block;
+    }
+
+    h6 {
+        margin-bottom: 15px;
+    }
+}
+
+/* 3.8.3 CTA Area CSS */
+
+.call_to_action_area {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        content: '';
+        background: rgba(72, 52, 212, 0.9);
+        background: -webkit-linear-gradient(to right, rgba(72, 52, 212, 0.9), rgba(52, 31, 151, 0.9));
+        background: -webkit-linear-gradient(left, rgba(72, 52, 212, 0.9), rgba(52, 31, 151, 0.9));
+        background: linear-gradient(to right, rgba(62, 81, 81, .8), rgba(222, 203, 164, .8));
+        z-index: -1;
+    }
+}
+
+.cta-content h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+
+    @media #{$breakpoint-lg} {
+        font-size: 36px;
+    }
+
+    @media #{$breakpoint-md} {
+        font-size: 30px;
+    }
+
+    @media #{$breakpoint-xs} {
+        font-size: 24px;
+    }
+}
+
+.cta-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+
+    @media #{$breakpoint-lg} {
+        font-size: 16px;
+    }
+
+    @media #{$breakpoint-md} {
+        font-size: 16px;
+    }
+
+    @media #{$breakpoint-xs} {
+        font-size: 14px;
+    }
+}
+
+.mfp-wrap {
+    z-index: 6000;
+}
+
+.mfp-bg {
+    z-index: 5500;
+}
+
+.mfp-iframe-holder .mfp-close,
+.mfp-image-holder .mfp-close {
+    right: 0;
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: $white;
+    line-height: 40px;
+    opacity: 1;
+    padding-right: 0;
+    background-color: $primary;
+}
+
+.mfp-iframe-holder .mfp-close {
+    top: 0;
+}
+
+.mfp-bottom-bar {
+    margin-top: -40px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    cursor: auto;
+    background-color: transform;
+    height: 40px;
+    @include display-flex(flex);
+    @include align-items-center;
+    @include justify-content-between;
+
+    .mfp-title {
+        font-size: 12px;
+        text-align: left;
+        line-height: 1;
+        color: $white;
+        padding: 6px 15px;
+        border-radius: 35px;
+        background-color: $primary;
+    }
+
+    .mfp-counter {
+        position: relative;
+        top: 0;
+        right: 0;
+        color: $white;
+        font-size: 12px;
+        line-height: 1;
+        padding: 6px 15px;
+        border-radius: 35px;
+        background-color: $primary;
+    }
+}
+
+/* 3.8.4 Gallery Area CSS */
+.single_gallery_item {
+    position: relative;
+    z-index: 1;
+    @include transition-duration(500ms);
+    margin-bottom: 30px;
+}
+
+.gallery-hover-overlay {
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 100%;
+    top: 0;
+    left: 15px;
+    z-index: 10;
+    background-color: rgba(15, 32, 39, .8);
+    @include flex-direction-column(column);
+    opacity: 0;
+    visibility: hidden;
+    @include transition-duration(500ms);
+    padding: 85px 30px;
+    text-align: center;
+}
+
+.single_gallery_item:hover .gallery-hover-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-menu button {
+    line-height: 1;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 8px 15px 5px;
+    border-radius: 30px;
+    margin: 5px;
+
+    &.active {
+        color: $white;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+    }
+}
+
+.port-more-view > a {
+    color: $white;
+    font-size: 24px;
+}
+
+.port-hover-text {
+    h3 {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    > a {
+        font-size: 12px;
+        color: $white;
+        text-transform: capitalize;
+    }
+}
+
+/* 3.8.5 Cool Facts Area CSS */
+
+.cool-facts-area {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.single_cool_fact {
+    position: relative;
+    z-index: 1;
+    border-top: 5px solid rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.cool-facts-area .col-12:first-child .single_cool_fact {
+    background-color: #eb4d4b;
+}
+
+.cool-facts-area .col-12:nth-child(2) .single_cool_fact {
+    background-color: #22a6b3;
+}
+
+.cool-facts-area .col-12:nth-child(3) .single_cool_fact {
+    background-color: #e056fd;
+}
+
+.cool-facts-area .col-12:last-child .single_cool_fact {
+    background-color: #e1b12c;
+}
+
+.cool_fact_icon i {
+    font-size: 20px;
+    margin-top: 15px;
+    color: $white;
+}
+
+.cool_fact_detail {
+    h3 {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    h2 {
+        font-size: 12px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+}
+
+.single_price_table_content {
+    padding: 50px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 2;
+    border-radius: 6px;
+
+    &.active {
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* 3.8.6 Price Table Area CSS */
+
+.price_table_text {
+    margin-bottom: 45px;
+
+    > h5 {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    > h1 {
+        font-size: 48px;
+        margin-bottom: 25px;
+        line-height: 1;
+
+        @media #{$breakpoint-xs} {
+            font-size: 42px;
+        }
+    }
+}
+
+.price_table_text > p,
+.table_text_details > p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 20px;
+}
+
+.table_text_details > p {
+    margin-bottom: 20px;
+}
+
+/* 3.8.7 Testimonial Area CSS */
+.testimonial-description {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    text-align: center;
+    @include transition-duration(500ms);
+}
+
+.testimonial_image {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+
+    > img {
+        border-radius: 50%;
+    }
+}
+
+.testimonial_text {
+    > p {
+        font-weight: 500;
+        color: $white;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
+
+    > h5 {
+        font-size: 16px;
+        color: $white;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+}
+
+.admin_text > p {
+    color: $white;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.client_slides {
+    .owl-dots {
+        @include display-flex(flex);
+        @include justify-content-center;
+        margin-top: 50px;
+    }
+
+    .owl-dot {
+        margin: 0 5px;
+        line-height: 1;
+        color: $white;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 12px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+        &.active {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+        }
+    }
+}
+
+/* 3.8.8 Team Member Area CSS */
+
+.single-team-member {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    margin-bottom: 100px;
+
+    &::after {
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $white;
+        content: "";
+        z-index: -5;
+    }
+
+    .team-member-thumb {
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-bottom: 30px;
+
+        @media #{$breakpoint-lg} {
+            width: 170px;
+            height: 170px;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .team-info {
+        position: relative;
+        z-index: 1;
+
+        h5 {
+            color: $secondary;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        p {
+            color: $secondary;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+    }
+
+    .team-social-icon {
+        a {
+            font-size: 15px;
+            color: $secondary;
+            margin-top: 15px;
+            display: inline-block;
+            padding-right: 10px;
+
+            &:focus,
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+/* 3.8.9 Timeline Area CSS */
+
+.timelineBox {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: $white;
+    border-radius: 2px;
+
+    .timelineHeader {
+        padding: 2rem;
+        background: #e91e63;
+        position: relative;
+        z-index: 3;
+
+        i {
+            position: absolute;
+            font-size: 100px;
+            color: $white;
+            top: 50%;
+            right: 20px;
+            z-index: 1;
+            @include transform(translateY(-50%));
+            opacity: 0.4;
+
+            @media #{$breakpoint-xs} {
+                font-size: 60px;
+            }
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin: 0;
+
+            @media #{$breakpoint-xs} {
+                font-size: 24px;
+            }
+        }
+
+        h3 + span {
+            font-size: 1.2rem;
+            color: $white;
+
+            @media #{$breakpoint-xs} {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .timelineBody {
+        max-height: 480px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .timeline {
+            padding: 2em;
+            margin: 0;
+            list-style: none;
+            position: relative;
+            z-index: 2;
+
+            li {
+                @include display-flex(flex);
+                @include justify-content-start;
+                @include align-items-start;
+                padding: 1em 0;
+                position: relative;
+                border-bottom: 1px solid $bg-gray;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .timelineDot {
+                height: 15px;
+                width: 15px;
+                background: $white;
+                border-radius: 2rem;
+                @include flex(0 0 15px);
+                max-width: 15px;
+                margin-top: 6px;
+                box-shadow: 0 0 8px #56cb5f;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 25px;
+                    left: 3px;
+                    height: 9px;
+                    width: 9px;
+                    background: #56cb5f;
+                    border-radius: 50%;
+                }
+            }
+
+            .timelineDate {
+                font-size: 14px;
+                @include flex(0 0 80px);
+                max-width: 80px;
+                width: 80px;
+                padding: 0;
+                text-align: center;
+
+                p {
+                    color: $secondary;
+                }
+            }
+
+            .timelineWork {
+                font-size: 16px;
+                margin-left: auto;
+                @include flex(0 0 calc(100% - 95px));
+                max-width: calc(100% - 95px);
+                width: calc(100% - 95px);
+
+                h6 {
+                    color: $secondary;
+                }
+
+                span {
+                    display: block;
+                    color: #bdbdbd;
+                    font-size: 13px;
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+}
+
+/* 3.8.10 FAQ Area CSS */
+
+.reen-faq-area {
+    position: relative;
+    z-index: 1;
+
+    dl {
+        width: 100%;
+    }
+
+    dt {
+        cursor: pointer;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 0;
+        color: $white;
+        font-weight: 500;
+
+        @media #{$breakpoint-lg} {
+            font-size: 14px;
+            padding: 9px;
+        }
+
+        &:last-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    dd {
+        margin: 0;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.ah-headline span.ah-words-wrapper b {
+    font-weight: 500;
+    color: #ff9800;
+}
+
+.welcome_single_slider {
+    position: relative;
+    z-index: 2;
+    height: 800px;
+
+    @media #{$breakpoint-lg} {
+        height: 700px;
+    }
+
+    @media #{$breakpoint-md} {
+        height: 600px;
+    }
+
+    @media #{$breakpoint-xs} {
+        height: 500px;
+    }
+
+    &::after {
+        width: 100%;
+        height: 100%;
+        background: rgba(72, 52, 212, 0.8);
+        background: -webkit-linear-gradient(to right, rgba(72, 52, 212, 0.8), rgba(52, 31, 151, 0.8));
+        background: -webkit-linear-gradient(left, rgba(72, 52, 212, 0.8), rgba(52, 31, 151, 0.8));
+        background: linear-gradient(to right, rgba(72, 52, 212, 0.8), rgba(52, 31, 151, 0.8));
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+    }
+}
+
+.welcome_area {
+    &.sliders {
+        overflow: hidden;
+    }
+
+    .welcome_slides .owl-next,
+    .welcome_slides .owl-prev {
+        color: $white;
+        font-size: 24px;
+        left: -100px;
+        margin-top: -44px;
+        position: absolute;
+        text-align: center;
+        top: calc(50% + 90px);
+        @include transition-duration(500ms);
+        z-index: 99;
+    }
+
+    .welcome_slides .owl-next {
+        right: -100px;
+        left: auto;
+    }
+
+    .welcome_slides:hover .owl-next {
+        right: 30px;
+    }
+
+    .welcome_slides:hover .owl-prev {
+        left: 30px;
+    }
+}
+
+.welcome-content .subscribe-email {
+    width: 70%;
+    height: 55px;
+    border: none;
+    padding: 0 25px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-style: italic;
+
+    @media #{$breakpoint-xs} {
+        width: 100%;
+    }
+}

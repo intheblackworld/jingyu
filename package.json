@@ -1,0 +1,37 @@
+{
+  "name": "reen-one-page-parallax",
+  "version": "1.0.0",
+  "description": "reen-one-page-parallax",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "MD NAZRUL ISLAM",
+  "license": "themeforest-license",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.6.1",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.1",
+    "bootstrap": "^4.1.3",
+    "counterup": "^1.0.2",
+    "elegant-icons": "0.0.1",
+    "font-awesome": "^4.7.0",
+    "imagesloaded": "^4.1.4",
+    "isotope-layout": "^3.0.6",
+    "jarallax": "^1.10.6",
+    "jquery": "^2.2.4",
+    "jquery-animated-headlines": "^1.0.0",
+    "jquery-waypoints": "^2.0.5",
+    "jquery.easing": "^1.4.1",
+    "jquery.nicescroll": "^3.7.6",
+    "magnific-popup": "^1.1.0",
+    "owl.carousel2": "^2.2.1",
+    "popper.js": "^1.14.5",
+    "wowjs": "^1.1.3"
+  }
+}

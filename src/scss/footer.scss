@@ -1,0 +1,64 @@
+/* 4.0 Footer CSS */
+
+.footer-area {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 100px;
+
+  .footer-side-thumbnail {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.3;
+  }
+}
+
+.footer-copywrite-info {
+  @media #{$breakpoint-xs} {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.copywrite_text {
+  position: relative;
+  z-index: 1;
+
+  > p {
+    margin-bottom: 10px;
+    color: $white;
+    font-size: 13px;
+
+    > a {
+      color: $white;
+    }
+  }
+}
+
+.footer-social-info a i {
+  font-size: 14px;
+  color: $white;
+  margin-right: 15px;
+  @include transition-duration(500ms);
+
+  &:hover {
+    color: #eaafc8;
+  }
+}
+
+.contact_info_area .contact_info {
+  text-align: center;
+
+  h5 {
+    font-size: 14px;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,104 @@
+/* 2.0 Header CSS */
+
+.header-area {
+  position: absolute;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include transition-duration(500ms);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  &.sticky {
+    position: fixed;
+    @include transition-duration(500ms);
+    background-color: $primary;
+    box-shadow: 0 3px 30px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+  }
+}
+
+.classy-nav-container {
+  background-color: transparent;
+}
+
+.classy-navbar {
+  height: 90px;
+  padding: 0;
+  @media #{$breakpoint-xs} {
+    height: 70px;
+  }
+}
+
+.classynav ul li a {
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.7);
+
+  &:focus,
+  &:hover {
+    color: $white;
+  }
+  @media #{$breakpoint-md} {
+    color: $dark;
+
+    &:focus,
+    &:hover {
+      color: $primary;
+    }
+  }
+  @media #{$breakpoint-xs} {
+    color: $dark;
+
+    &:focus,
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.classynav ul li.has-down > a::after,
+.classynav ul li.megamenu-item > a::after {
+  color: rgba(255, 255, 255, 0.7);
+  @media #{$breakpoint-md} {
+    color: $dark;
+  }
+  @media #{$breakpoint-xs} {
+    color: $dark;
+  }
+}
+
+.classynav ul li .dropdown li a,
+.classynav ul li .megamenu-item li a {
+  color: $dark;
+  font-size: 13px;
+
+  &::after {
+    color: $dark;
+  }
+
+  &:focus,
+  &:hover {
+    color: $primary;
+  }
+}
+
+.classynav ul li .dropdown,
+.classynav ul li .megamenu-item {
+  @media #{$breakpoint-md} {
+    padding-left: 15px;
+  }
+  @media #{$breakpoint-xs} {
+    padding-left: 15px;
+  }
+}
+
+.classy-navbar .nav-brand {
+  max-width: 130px;
+  @media #{$breakpoint-xs} {
+    max-width: 100px;
+  }
+}
+
+.classy-navbar-toggler .navbarToggler span {
+  background-color: $white;
+}

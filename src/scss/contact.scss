@@ -1,0 +1,91 @@
+/* 3.5 Contact CSS */
+.group {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+
+  input,
+  textarea {
+    font-size: 12px;
+    font-style: italic;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    color: $white;
+    border-radius: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+  }
+
+  label {
+    color: $white;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 14px;
+    @include transition(0.5s ease all);
+    margin-bottom: 0;
+  }
+
+  .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    &::after,
+    &::before {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 0;
+      position: absolute;
+      background-color: $white;
+      @include transition(0.5s ease all);
+    }
+
+    &::before {
+      left: 50%;
+    }
+
+    &::after {
+      right: 50%;
+    }
+  }
+
+  textarea {
+    height: 130px;
+  }
+}
+
+.group input:focus~label,
+.group input:valid~label,
+.group textarea:focus~label,
+.group textarea:valid~label {
+  top: -17px;
+  font-size: 12px;
+  color: $white;
+}
+
+.group input:focus~.bar:after,
+.group input:focus~.bar:before,
+.group textarea:focus~.bar:after,
+.group textarea:focus~.bar:before {
+  width: 50%;
+  background-color: $white;
+}
+
+input:required,
+textarea:required {
+  box-shadow: none !important;
+}

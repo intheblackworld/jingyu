@@ -1,0 +1,132 @@
+/* 3.1 Hero CSS */
+.welcome_area {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 800px;
+  @media #{$breakpoint-lg} {
+    height: 700px;
+  }
+  @media #{$breakpoint-md} {
+    height: 600px;
+  }
+  @media #{$breakpoint-xs} {
+    height: 900px;
+  }
+
+  &.sliders {
+    @media #{$breakpoint-md} {
+      height: 600px;
+    }
+    @media #{$breakpoint-xs} {
+      height: 500px;
+    }
+  }
+
+  &.animated-headline {
+    @media #{$breakpoint-xs} {
+      height: 500px;
+    }
+  }
+
+  &::after {
+    width: 100%;
+    height: 100%;
+    background: rgba(72, 52, 212, 0.95);
+    background: -webkit-linear-gradient(to right, rgba(72, 52, 212, 0.95), rgba(52, 31, 151, 0.95));
+    background: -webkit-linear-gradient(left, rgba(72, 52, 212, 0.95), rgba(52, 31, 151, 0.95));
+    background: linear-gradient(to right, rgba(72, 52, 212, 0.95), rgba(52, 31, 151, 0.95));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+  }
+
+  &.bubles-animated {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  margin-top: 90px;
+
+  h2 {
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    @media #{$breakpoint-lg} {
+      font-size: 32px;
+    }
+    @media #{$breakpoint-md} {
+      font-size: 20px;
+    }
+    @media #{$breakpoint-xs} {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: $white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    @media #{$breakpoint-xs} {
+      font-size: 14px;
+    }
+  }
+}
+
+.welcome-video-area {
+  position: relative;
+  z-index: 1;
+  margin-top: 90px;
+  @media #{$breakpoint-xs} {
+    margin-top: 0;
+  }
+
+  .welcome-thumb {
+    position: relative;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      border-radius: 40px;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.video-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  @include transform(translate(-50%, -50%));
+  z-index: 10;
+  color: #4834d4;
+}
+
+.video-btn {
+  background-color: #4834d4;
+  width: 70px;
+  height: 70px;
+  color: $white;
+  border-radius: 50%;
+  line-height: 70px;
+  padding: 0;
+  text-align: center;
+  min-width: 70px;
+  font-size: 24px;
+
+  &:hover {
+    background-color: #4834d4;
+    color: $white;
+  }
+}
